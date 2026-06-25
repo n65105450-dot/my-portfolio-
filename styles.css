@@ -252,7 +252,9 @@ main {
     border: 0;
     pointer-events: none;
     transition: transform 30s ease;
-    filter: saturate(1.05) brightness(0.92);
+    filter:saturate(1.15)
+brightness(1.08)
+contrast(1.05);
     will-change: transform;
 }
 
@@ -266,19 +268,19 @@ main {
 }
 
 /* Gradient overlay on video - dark at bottom, transparent at top */
-.hero-video-wrap::after {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.55) 0%,
-        rgba(0,0,0,0.25) 40%,
-        rgba(0,0,0,0.05) 75%,
-        transparent 100%
-    );
-    pointer-events: none;
-    z-index: 1;
+.hero-video-wrap::after{
+content:'';
+position:absolute;
+inset:0;
+
+background:linear-gradient(
+to top,
+rgba(0,0,0,.20) 0%,
+rgba(0,0,0,.08) 45%,
+transparent 100%
+);
+
+z-index:1;
 }
 
 /* Lighten the hero content background and reduce opacity of card */
@@ -298,8 +300,8 @@ main {
 .campus-hero-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(16, 10, 32, 0.58);
-    backdrop-filter: blur(10px);
+    background: rgba(16,10,32,0.15);
+    backdrop-filter: blur(3px);
     z-index: 1;
 }
 
